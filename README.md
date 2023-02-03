@@ -1,4 +1,16 @@
-Brain Dump
+# Brain Dump
+
+-----
+
+# Ideas
+
+-It would be really cool to have roles for this. 1 is a view only role and 1 is edit mode where you can add notes/music. That way I could share the link to the site and have a portfolio but also have a useful site
+- In the margin between each section I could have plants since I like to think of this as a digital garden. When you mouse over them the cursor could change to a watering can and water comes out when you click
+
+
+-----
+
+# Design
 
 ## Top Section:
 
