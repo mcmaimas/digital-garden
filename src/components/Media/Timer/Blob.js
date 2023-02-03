@@ -6,11 +6,11 @@ import { MathUtils } from "three";
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
 
-const Blob = () => {
+const Blob = ({timeInput}) => {
   // This reference will give us direct access to the mesh
   const mesh = useRef();
   const hover = useRef(false);
-  const [timeInput, setTimeInput] = useState(10)
+  // const [timeInput, setTimeInput] = useState(10);
 
   const uniforms = useMemo(
     () => ({
