@@ -19,14 +19,6 @@ const Layout: FC<{}> = () => {
           <Media />
         </Box>
       </Box>
-      {/* <Box height="50%"  display="flex">
-        <Box width="50%" m={2}>
-          <Notebook />
-        </Box>
-        <Box width="50%" m={2}>
-          
-        </Box>
-      </Box> */}
       <Notebook />
     </Box>
   )

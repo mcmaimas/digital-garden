@@ -7,15 +7,11 @@ const Tutorials: FC<{}> = () => {
 
   return (
     <Paper style={{ height: "100%" }}>
-
       <Box height="50%">
         Tutorials
       </Box>
-      
-
     </Paper>
   )
-
 }
 
 export default Tutorials;
