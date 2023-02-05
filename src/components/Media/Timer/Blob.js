@@ -6,11 +6,11 @@ import { MathUtils } from "three";
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
 
-const Blob = ({timeInput}) => {
+const Blob = ({timeInput, setTimeRemaining}) => {
   // This reference will give us direct access to the mesh
   const mesh = useRef();
   const hover = useRef(false);
-  // const [timeInput, setTimeInput] = useState(10);
+  
 
   const uniforms = useMemo(
     () => ({
@@ -26,6 +26,9 @@ const Blob = ({timeInput}) => {
 
   useFrame((state) => {
     const { clock } = state;
+
+    const timeRemaining = Math.max(timeInput - clock.getElapsedTime(), 0);
+    setTimeRemaining(timeRemaining)
     mesh.current.material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();    
     mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
       mesh.current.material.uniforms.u_intensity.value,
@@ -43,6 +46,7 @@ const Blob = ({timeInput}) => {
       onPointerOver={() => (hover.current = true)}
       onPointerOut={() => (hover.current = false)}
     >
+      
       <icosahedronGeometry args={[2, 40]} />
       <shaderMaterial
         fragmentShader={fragmentShader}
